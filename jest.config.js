@@ -12,6 +12,7 @@ module.exports = {
   ],
   coverageDirectory: 'reports/coverage',
   reporters: [
+    'jest-junit',
     'default',
   ],
   transform: {

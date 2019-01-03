@@ -11,5 +11,11 @@ jobs:
       - run:
           name: Test
           command: 'npm test'
+      - store_artifacts:
+          path: 'reports/coverage'
+          prefix: coverage
+      - store_artifacts:
+          path: 'junit.xml'
+          prefix: tests
       - store_test_results:
-          path: 'reports/coverage/clover.xml'
+          path: 'junit.xml'
