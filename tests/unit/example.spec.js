@@ -9,4 +9,7 @@ describe('HelloWorld.vue', () => {
     });
     expect(wrapper.text()).toMatch(msg);
   });
+  it('should not fail', () => {
+    expect(true).toBe(true);
+  });
 });
