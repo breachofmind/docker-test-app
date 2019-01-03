@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  test:
+    steps:
+      - checkout
+      - run:
+          name: Build and run test
+          command: npm run build && npm test
+      - store_test_results:
+          path: reports/coverage/coverage-final.json
+
+workflows:
+  version: 2
+  verify:
+    jobs:
+      - test
